@@ -13,9 +13,9 @@ const Skills = () => {
   const [ skills, setSkills ] = useState([])
 
   useEffect(() => {
-    const query = '*[_type == "skills"]' // Fetching all my skills
+    const skillsQuery = '*[_type == "skills"]' // Fetching all my skills
 
-    client.fetch(query).then((data) => {
+    client.fetch(skillsQuery).then((data) => {
       setSkills(data);
     });
   }, []);
@@ -36,8 +36,9 @@ const Skills = () => {
                 style={{ backgroundColor: skill.bgColor }}  
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
+      
               </div>
-              <p className="app_flex">{skill.name}</p>
+              {/* <p className="app_flex">{skill.name}</p> */}
               
             </motion.div>
           ))}
@@ -49,12 +50,6 @@ const Skills = () => {
         <div className="app__skills-p">
           <p>Leadership Teamwork Communication Adaptability Patience <span>Customer Service</span></p>
         </div>
-        {/* <div className="app__skills-bottom">
-          <h3>Spoken Languages</h3>
-        </div>
-        <div className="app__skills-p">
-          <p>English Farsi</p>
-        </div> */}
     </>
   )
 }
