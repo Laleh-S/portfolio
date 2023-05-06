@@ -8,7 +8,7 @@ import redux from '../assets/redux.png'
 import sass from '../assets/sass.png'
 import logo from '../assets/logo.png'
 import laleh from '../assets/laleh.png'
-
+import me from '../assets/me.jpg'
 
 
 
@@ -23,4 +23,5 @@ export default {
   sass,
   logo,
   laleh,
+  me,
 }
