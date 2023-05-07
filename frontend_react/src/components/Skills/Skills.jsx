@@ -44,12 +44,20 @@ const Skills = () => {
           ))}
         </motion.div>
       </div>   
-        <div className="app__skills-bottom">
+        
+        <div className='app__skills-bottom'>
           <h2>Soft Skills</h2>
+          <ul className='app__skills'>
+            <li>Leadership</li>
+            <li>Teamwork</li>
+            <li>Patience</li>
+            <li>Adaptability</li>
+            <li>Communication</li>
+            <li>Customer Service</li>
+            <li>Problem Solving</li>
+          </ul>
         </div>
-        <div className="app__skills-p">
-          <p>Leadership Teamwork Communication Adaptability Patience <span>Customer Service</span></p>
-        </div>
+      
     </>
   )
 }

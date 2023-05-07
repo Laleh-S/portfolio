@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 
   h1 {
       display: flex;
@@ -25,9 +26,11 @@
       word-spacing: 8px;
       font-weight: normal;
       color: rgb(230, 35, 148);
-      margin-bottom: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+  
   }
-
+  
   a {
     padding: 1.5rem;
   }
@@ -40,7 +43,7 @@
   color: rgb(110, 108, 108);
 
   &:hover {
-    box-shadow: 0 0 20px rgb(230, 35, 148);
+    box-shadow: 0 0 10px rgb(230, 35, 148);
   }
 }
 }
