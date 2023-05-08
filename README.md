@@ -1,1 +1,1 @@
-Link to project https://app.netlify.com/sites/laleh-portfolio/overview
+Link to project https://laleh-portfolio.netlify.app
