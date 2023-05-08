@@ -4,14 +4,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
-  margin-right: 1rem;
+  padding: 1rem;
   background: rgba(201, 200, 200, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   position: fixed;
   z-index: 2;
-  
+
+  // img {
+  //   width: 50px;
+  //   height: 50px;
+  //   margin: 0;
+  //   padding:0;
+  // }  
 }
 
 .app__navbar-links {
@@ -23,7 +28,7 @@
 
   li {
     margin: 0 1rem;
-    cursor:pointer;
+    cursor:pointer; // "pointer" so the user knows its clickable
     flex-direction: column;
 
     div {
@@ -70,13 +75,15 @@
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
+  margin-left: 1rem;
+  
+  
 
-  // svg{
-  //   width: 70%;
-  //   height: 70%;
-  //   // color: var(--white-color)
-    
-  // }
+  svg{
+    width: 70%;
+    height: 70%;
+    color: var(--white-color);
+  }
 
   div {
     position: fixed;
@@ -85,17 +92,19 @@
     right: 0;
     z-index: 5;
     padding: 1rem;
-    width: 80;
     height: 100vh;
 
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+    // background: url("");
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
     box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+    
+
 
     svg {
       width: 35%;
@@ -115,8 +124,10 @@
       align-items: flex-start;
       flex-direction: column;
 
+
       li {
         margin: 1rem;
+      
 
         a {
           color: var(--gray-color);
@@ -124,8 +135,8 @@
           font-size: 1rem;
           text-transform: uppercase;
           font-weight: 500;
-
-          transition: all 0.3s ease-in-out;
+      
+          transition: all 0.10s ease-in-out;
 
           &:hover {
             color: var(--secondary-color);

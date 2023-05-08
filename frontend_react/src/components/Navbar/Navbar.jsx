@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.scss'
-// import { images } from '../../constants'
+import { images } from '../../constants'
 import { HiMenuAlt4, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 
@@ -9,6 +9,9 @@ const Navbar = () => {
 
   return (
     <nav className="app__navbar">
+      {/* <div>
+        <img src={images.logo} alt="logo" />
+      </div> */}
       <ul className="app__navbar-links">
         {['home', 'about', 'projects', 'skills'].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
@@ -31,7 +34,7 @@ const Navbar = () => {
                 {['home', 'about', 'projects', 'skills'].map((item) => (
                   <li key={item}>
                     <div />
-                    <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a> {/* closes the navigation bar after we click on a link */}
                   </li>            
                 ))}
               </ul>
