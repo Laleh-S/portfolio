@@ -38,11 +38,9 @@
 
 .copyright {
   width: 100%;
-  padding: 2rem 0 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-end;
 
   p {
@@ -180,9 +178,5 @@
   .app__navigation,
   .app__social {
     display: none;
-  }
-
-  .copyright {
-    padding: 2rem;
   }
 }

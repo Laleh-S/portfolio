@@ -5,7 +5,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: rgba(201, 200, 200, 0.25);
+  background: rgba(246, 243, 243, 0.25);
+  
+  
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   position: fixed;
@@ -41,7 +43,7 @@
 
     a {
       color: var(--primary-color);
-      color: var(--black-color);
+      
       text-decoration: none;
       flex-direction: column;
       text-transform: uppercase;
