@@ -14,14 +14,9 @@ const About = () => {
       <div className="app__about-container">
             <img src={images.me} alt="me" /> 
             {/* <img src={assets.me} alt="me" /> */}
-            <p><span>Hello, I am Laleh!</span><br /> <br />A junior software engineer from London with a thirst for knowledge and love for 
-            technology. My interest in programming started as a hobby; within a few months my enthusiasm led to my enrolment in a 
-            software engineering course at General Assembly where I developed my skills and gained invaluable knowledge.  <br/> <br/>
-            Being a natural problem solver gave me a natural inclination towards finding solutions to challenges, often with creative 
-            resourceful approaches. I believe this is a valuable skill in many fields and would contribute to my success and fulfilment
-            in both professional and personal life. <br /> < br />
-            I would describe myself as someone who is mentally tough, loves challenges, disciplined and great on a team as well as 
-            working alone. Working within the healthcare industry gave me the ability to adapt and work under pressure. </p>
+            <p><span>Hello, I am Laleh!</span><br /> <br />A junior software engineer from London with a strong passion for technology and a constant thirst for learning. My journey into programming began as a hobby, leading me to enrol in a software engineering bootcamp at General Assembly. There, I honed my skills and gained valuable knowledge.  <br/> <br/>
+            My natural ability to solve problems has led me to find creative solutions to challenges. I think this skill is valuable in many areas and would contribute to my success and fulfilment in both my professional and personal lives. <br /> < br />
+            I would describe myself as mentally tough, thriving on challenges, disciplined, and effective both in team settings and when working independently. My experience in the healthcare industry has equipped me with the ability to adapt and perform well under pressure.</p>
       </div>
       
     </>
@@ -29,5 +24,8 @@ const About = () => {
 }
 
 export default AppWrap(About, 'about')
+
+
+
 
 
