@@ -26,8 +26,9 @@ const Header = () => (
       className="app__header-info"
       >
 
-      <div className="app__icons">        
-        <h1>Laleh Shahidi</h1>
+      <div className="app__icons"> 
+        <h1>Hi, My name is Laleh</h1>
+        <h2>A a dental nurse turned software developer</h2>
         <div className="app__icons-ai">
           <a classname="git" href="https://github.com/Laleh-S" target="_blank" rel="noreferrer">
             <AiFillGithub />
