@@ -1,26 +1,29 @@
 import React from 'react'
 import './Header.scss'
 import { motion } from 'framer-motion'
-import { images } from '../../constants'
+
 import { AppWrap } from '../../wrapper'
 import { AiFillGithub,  AiFillLinkedin , AiOutlineMail} from 'react-icons/ai';
 
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1], 
-    opacity: [0, 1],
-    transition: {
-      duration:1,
-      ease: 'easeInOut'
-    }
-  }
-}
+// const scaleVariants = {
+//   whileInView: {
+//     scale: [0, 1], 
+//     opacity: [0, 1],
+//     transition: {
+//       duration:1,
+//       ease: 'easeInOut'
+//     }
+//   }
+// }
 
 const Header = () => (
     <div className="app__header app__flex">
       <motion.div
-      // -100 is animating from minus value. opacity 0, 1 meaning from fully invisible to fully visible. 
+      // -100 is animating from minus value. opacity 
+      // 0, 1 meaning from fully invisible to fully visible.
+      
+      // ----- Code for moving animation on the Header page ---- //
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 1.5 }}
       className="app__header-info"
