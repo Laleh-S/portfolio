@@ -1,8 +1,8 @@
-import me from "../assets/me.jpg"
-import logo from "../assets/logo.png"
+import me from '../assets/me.jpg';
+import logoSmall from '../assets/logoSmall.png'
 
 
 export default {
   me,
-  logo,
+  logoSmall,
 }

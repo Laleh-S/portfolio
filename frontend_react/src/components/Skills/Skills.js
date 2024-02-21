@@ -27,8 +27,8 @@ const Skills = () => {
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
             <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
+              // whileInView={{ opacity: [0, 1] }}
+              // transition={{ duration: 0.5 }}
               className="app__skills-item app_flex"
               key={skill.name}
             >
@@ -36,7 +36,12 @@ const Skills = () => {
                 className="app__flex"
                 // style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+                {/* <img src={urlFor(skill.icon)} alt={skill.name} /> */}
+                <motion.img
+                src={urlFor(skill.icon)}
+                alt={skill.name}
+                whileHover={{ scale: 1.3 }} 
+              />
               </div>
               {/* <p className="app_flex">{skill.name}</p> */}
             </motion.div>

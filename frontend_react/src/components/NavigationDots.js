@@ -1,8 +1,9 @@
 import React from 'react'
 
-const NavigationDots = ({ active }) => (  // the active will tell us in which section we are currently in
+const NavigationDots = ({ active }) => (  // the active will tell us in which section or page we are currently in
   <div className="app__navigation">
     {['home', 'about', 'projects', 'skills'].map((item, index) => (
+      // eslint-disable-next-line jsx-a11y/anchor-has-content
       <a
         href={`#${item}`}
         key={item + index}

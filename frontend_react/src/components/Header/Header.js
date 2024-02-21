@@ -1,36 +1,21 @@
-import React from 'react'
-import './Header.scss'
-import { motion } from 'framer-motion'
-
-import { AppWrap } from '../../wrapper'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { AiFillGithub,  AiFillLinkedin , AiOutlineMail} from 'react-icons/ai';
-
-
-// const scaleVariants = {
-//   whileInView: {
-//     scale: [0, 1], 
-//     opacity: [0, 1],
-//     transition: {
-//       duration:1,
-//       ease: 'easeInOut'
-//     }
-//   }
-// }
+import { AppWrap } from '../../wrapper';
+import './Header.scss';
+import images from '../images';
 
 const Header = () => (
     <div className="app__header app__flex">
       <motion.div
-      // -100 is animating from minus value. opacity 
-      // 0, 1 meaning from fully invisible to fully visible.
-      
-      // ----- Code for moving animation on the Header page ---- //
+       // ++++++++++ Moving animation on the Header page ++++++++++ //
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 1.5 }}
       className="app__header-info"
       >
-
-      <div className="app__icons"> 
-        <h1>Hi, My name is Laleh</h1>
+      <div className="app__icons">
+        <img src={images.logoSmall} alt="logo" />
+        <h1>Hello, I'm Laleh</h1>
         <h2>A a dental nurse turned software developer</h2>
         <div className="app__icons-ai">
           <a classname="git" href="https://github.com/Laleh-S" target="_blank" rel="noreferrer">

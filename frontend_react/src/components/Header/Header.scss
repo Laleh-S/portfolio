@@ -21,12 +21,11 @@
 
   h1 {
       display: flex;
-      font-size: 65px;
-      // color: rgb(110, 108, 108);
+      font-size: 55px;
       font-family: Roboto;
       word-spacing: 8px;
       font-weight: normal;
-      color: rgb(230, 35, 148);
+      color: var(--secondary-color);
       margin-top: 1rem;
       margin-bottom: 1.5rem;
   }
@@ -35,6 +34,11 @@
     display: flex;
     font-size: 25px;
     color: rgb(110, 108, 108);
+    color: var(--primary-color);
+  }
+
+  img {
+    width: 100px;
   }
   
   a {
@@ -49,9 +53,9 @@
   color: var(--primary-color);
   color: rgb(110, 108, 108);
   
-
   &:hover {
     box-shadow: 0 0 10px rgb(230, 35, 148);
+    padding: 5px;
   }
 }
 }

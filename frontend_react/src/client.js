@@ -1,3 +1,5 @@
+// Connecting Sanity to React...
+
 import sanityClient from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
@@ -7,7 +9,7 @@ export const client = sanityClient({
   apiVersion: '2022-02-01',
   useCdn: true,
   token: process.env.REACT_APP_SANITY_TOKEN,
-  ignoreBrowserTokenWarning: true,
+  ignoreBrowserTokenWarning: true, 
 });
 
 const builder = imageUrlBuilder(client);

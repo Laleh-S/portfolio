@@ -19,7 +19,7 @@
   &:hover {
     box-shadow: 0 0 30px rgb(88, 87, 86);
     border-radius: 20px;
-    padding: 1rem;
+    // padding: 1rem;
   }
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -67,7 +67,7 @@
   
     &:hover {
       box-shadow: 0 0 5px hsl(60, 1%, 23%);
-      transform: translate3D(0, -6px, 0);
+      // transform: translate3D(0, -6px, 0);
     }
   
     @media screen and (max-width: 450px) {
