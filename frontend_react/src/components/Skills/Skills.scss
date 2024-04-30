@@ -1,37 +1,37 @@
 
 #skills {
-  background: rgb(34, 34, 43);
 }
+
+/* Main container for skills */
 .app__skills {
   flex: 1;
   width: 100%;
   flex-direction: column;
 }
 
-
-
+/* Container for skills content */
 .app__skills-container {
   width: 80%;
   display:flex;
   flex-direction: row;
-  // align-items: center;
+  justify-content: space-around; /* Adjusted alignment */
 
   &:hover {
     box-shadow: 0 0 30px rgb(88, 87, 86);
     border-radius: 20px;
-    // padding: 1rem;
   }
+  
+  /* Responsive layout for smaller screens */
   @media screen and (max-width: 900px) {
     width: 100%;
     flex-direction: column;
   }
-
 }
 
+/* List of skills displayed in a flex layout */
 .app__skills-list {
   flex: 1;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -42,53 +42,50 @@
   }
 }
 
+/* Styling for each individual skill item */
 .app__skills-item {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   transition: all 0.3s ease-in-out;
   padding: 2rem;
   margin-top: 2rem;
 
+  /* Container for skill icon */
   div {
     width: 100px;
     height: 100px;
-    border-radius: 30%;
+    border-radius: 40%;
     background-color: white;
     padding: 1rem;
+    display: flex;
     justify-content: center;
+    align-items: center;
   
     img {
-      width: 140%;
-      height: 140%;
+      width: 100%; /* Adjusted size of image */
+      height: 100%;
     }
 
-  
-    &:hover {
-      box-shadow: 0 0 5px hsl(60, 1%, 23%);
-      // transform: translate3D(0, -6px, 0);
-    }
   
     @media screen and (max-width: 450px) {
       width: 70px;
       height: 70px;
-    }
-    
+    } 
   }
 
+  /* Skill description */
   p {
     color: rgb(128, 124, 124);
     font-size: 10px;
   }
 } 
 
+/* Bottom section of skills */
 .app__skills-bottom {
   color: var(--primary-color);
   margin-top: 5rem;
-}
-
-.app__skills-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,10 +99,61 @@
     text-align: center;
     justify-content: center;
   }
+}
 
-  ul li {
-    display: inline-block;
-    padding: 1rem;
+.app__skills-bottom ul li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+
+.app__skills-bottom {
+  text-align: center;
+}
+
+.app__skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.skill-card {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.skill-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+}
+
+.skill-back {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 10px;
+
+  p {
+    color: red;
+    font-size: 12px;
   }
+}
 
+.skill-card:hover .skill-back {
+  display: block;
 }

@@ -1,17 +1,32 @@
-import React from 'react'
+import React from 'react';
 
-const NavigationDots = ({ active }) => (  // the active will tell us in which section or page we are currently in
-  <div className="app__navigation">
-    {['home', 'about', 'projects', 'skills'].map((item, index) => (
-      // eslint-disable-next-line jsx-a11y/anchor-has-content
-      <a
-        href={`#${item}`}
-        key={item + index}
-        className="app__navigation-dot"
-        style={active === item ? { backgroundColor: '#313BAC' } : {}}
-      />
-    ))}
-  </div>
-);
+const NavigationDots = ({ active }) => {  // the active will tell us in which section or page we are currently in
+  // Define an array of section IDs for navigation dots
+  const sections = ['home', 'about', 'projects', 'skills'];
+
+  return (
+    <div className="app__navigation">
+      {/* Map through the sections array to render navigation dots */}
+      {sections.map((sectionId, index) => (
+        <a
+          key={sectionId + index}
+          href={`#${sectionId}`}
+          className="app__navigation-dot"
+          style={active === sectionId ? { backgroundColor: '#1372df' } : {}}
+        />
+      ))}
+    </div>
+  );
+};
 
 export default NavigationDots;
+
+
+
+
+
+
+
+
+
+

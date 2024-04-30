@@ -1,12 +1,11 @@
-
+/* Navbar container */
 .app__navbar {
   width: 100%;
   height: 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   background: rgba(246, 243, 243, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -15,18 +14,7 @@
   z-index: 2;
 }
 
-.app__navbar-logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  img {
-    width: 50px;
-    height: 50px;
-    margin: 0;
-  }
-}
-
+/* Links */
 .app__navbar-links {
   flex: 1;
   display: flex;
@@ -34,16 +22,17 @@
   align-items: center;
   list-style: none;
 
+  /* Individual link styles */
   li {
+    display: flex;
     margin: 0 1rem;
-    cursor:pointer; 
+    cursor: pointer;
     flex-direction: column;
 
-    // +++++++++ Pink dots hover +++++++++//
+     /* Pink dots hover */
     div {
-      width: 8px;
-      height: 8px;
-      background: transparent;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       margin-bottom: 5px;
     }
@@ -54,44 +43,44 @@
       flex-direction: column;
       text-transform: uppercase;
       font-weight: 500;
-      font-size: 15px;
+      font-size: 17px;
       transition: all 0.3s ease-in-out;
-      
-      &:hover {
-        color: var(--secondary-color);
-      }
     }
 
+    /* Pink dots hover effect */
     &:hover {
       div {
         background: var(--secondary-color);
       }
     }
   }
-  // for devices more than 900 px we set the display to none
+
+  /* Hide navbar links on devices less than 900px wide */
   @media screen and (max-width: 900px) {
     display: none;
   }
 }
 
+/* Hamburger menu icon */
 .app__navbar-menu {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   position: relative;
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var( --blue-color);
+  background-color: var(--blue-color);
   margin-left: 1rem;
-  
-  svg{
+
+  /* Hamburger menu icon SVG */
+  svg {
     width: 70%;
     height: 70%;
     color: var(--white-color);
   }
 
+  /* Sidebar menu styles */
   div {
     position: fixed;
     top: 0;
@@ -100,19 +89,18 @@
     z-index: 5;
 
     padding: 1rem;
-    // width: 80%;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-  
+
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
     box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
-    
 
+    /* Sidebar the 'X' menue */
     svg {
       width: 25%;
       height: 25%;
@@ -120,6 +108,7 @@
       margin: 0.5rem 1rem;
     }
 
+    /* Sidebar menu list */
     ul {
       list-style: none;
       margin: 0;
@@ -132,6 +121,7 @@
       align-items: flex-start;
       flex-direction: column;
 
+      /* Sidebar menu item */
       li {
         margin: 1rem;
 
@@ -141,7 +131,7 @@
           font-size: 1rem;
           text-transform: uppercase;
           font-weight: 500;
-      
+
           transition: all 0.3s ease-in-out;
 
           &:hover {
@@ -150,12 +140,14 @@
         }
       }
     }
-    // If we expand the woindow over 900 px the menu will disapear
+
+    /* Hide sidebar menu on screens wider than 900px */
     @media screen and (min-width: 900px) {
       display: none;
-    }  
+    }
   }
 
+  /* Hide menu icon on screens wider than 900px */
   @media screen and (min-width: 900px) {
     display: none;
   }
