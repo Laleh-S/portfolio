@@ -23,3 +23,4 @@ const MotionWrap = (Component, classNames) => {
 };
 
 export default MotionWrap;
+

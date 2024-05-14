@@ -38,7 +38,7 @@ const Projects = () => {
         setFilterProjects(projects);
         // else, filter projects based on selected category
       } else {
-        setFilterProjects(projects.filter((project) => project.tags.includes(item)));
+        setFilterProjects(projects.filter((project) => project.tags && project.tags.includes(item)));
       }
     }, 500);
   }

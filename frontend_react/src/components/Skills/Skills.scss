@@ -1,6 +1,7 @@
 
-#skills {
-}
+// #skills {
+  
+// }
 
 /* Main container for skills */
 .app__skills {
@@ -80,6 +81,11 @@
     color: rgb(128, 124, 124);
     font-size: 10px;
   }
+
+  span {
+    padding-top: 0.5rem;
+    color: var(--primary-color);
+  }
 } 
 
 /* Bottom section of skills */
@@ -111,49 +117,10 @@
   text-align: center;
 }
 
-.app__skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.soft-skills {
+  color: var(--primary-color);
 }
 
 
 
-.skill-card {
-  width: 200px;
-  height: 150px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  cursor: pointer;
-  position: relative;
-}
 
-.skill-front {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 10px;
-}
-
-.skill-back {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  padding: 10px;
-
-  p {
-    color: red;
-    font-size: 12px;
-  }
-}
-
-.skill-card:hover .skill-back {
-  display: block;
-}

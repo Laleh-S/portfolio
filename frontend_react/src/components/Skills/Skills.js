@@ -1,10 +1,10 @@
-import React from "react";
-import "./Skills.scss";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ReactTooltip from "react-tooltip";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import './Skills.scss';
+// import SoftSkills from "./SoftSkills";
 
 const Skills = () => {
   // State to store skills data fetched 
@@ -15,7 +15,9 @@ const Skills = () => {
     const skillsQuery = '*[_type == "skills"]'; 
 
     client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
+      // Filter out draft versions of skills
+      const filteredSkills = data.filter(skill => !skill._id.startsWith('drafts.'));
+      setSkills(filteredSkills);
     });
   }, []); // Empty dependency array means effect runs only once after initial render
 
@@ -28,7 +30,7 @@ const Skills = () => {
         <motion.div className="app__skills-list">
           {/* Mapping through skills data and rendering each skill item */}
           {skills.map((skill) => (
-            <motion.div className="app__skills-item app_flex" key={skill.name}>
+            <motion.div className="app__skills-item app_flex" key={skill._id}>
               <div className="app__flex">
                 <motion.img
                 src={urlFor(skill.icon)}
@@ -36,6 +38,7 @@ const Skills = () => {
                 whileHover={{ scale: 1.3 }} 
               />
               </div>
+              <span>{skill.name}</span>
             </motion.div>
           ))}
         </motion.div>
@@ -59,3 +62,4 @@ const Skills = () => {
 };
 
 export default AppWrap(Skills, "skills");
+
