@@ -4,9 +4,9 @@ import ReactTooltip from "react-tooltip";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import './Skills.scss';
-// import SoftSkills from "./SoftSkills";
+import SoftSkills from "./SoftSkills";
 
-const Skills = () => {
+function Skills () {
   // State to store skills data fetched 
   const [skills, setSkills] = useState([]);
 
@@ -45,7 +45,7 @@ const Skills = () => {
       </div>
 
       {/* Container for displaying soft skills */}
-      <div className="app__skills-bottom">
+      {/* <div className="app__skills-bottom">
         <h2>Soft Skills</h2>
         <ul className="app__skills">
           <li>Leadership</li>
@@ -56,7 +56,8 @@ const Skills = () => {
           <li>Customer Service</li>
           <li>Problem Solving</li>
         </ul>
-      </div>
+      </div> */}
+      <SoftSkills />
     </>
   );
 };

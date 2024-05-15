@@ -3,7 +3,7 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 import images from '../images';
 
-const About = () => {
+function About () {
   return (
     <div>  
       <h2 className="head-text">About</h2>

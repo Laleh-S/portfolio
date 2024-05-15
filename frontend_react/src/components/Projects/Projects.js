@@ -8,7 +8,7 @@ import { AppWrap, MotionWrap } from '../../wrapper' // AppWrap higher-order comp
 import { urlFor, client } from '../../client' // Utility functions for fetching data
 
 
-const Projects = () => {
+function Projects () {
   const [filterProjects, setFilterProjects] = useState([]); // Filtered projects states
   const [activeFilter, setActiveFilter] = useState('All');  // Active filter category states
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });  // Animation properties state

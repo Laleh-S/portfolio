@@ -5,7 +5,8 @@ import { AppWrap } from '../../wrapper';
 import './Header.scss';
 import images from '../images';
 
-const Header = () => (
+function Header () {
+  return (
     <div className="app__header app__flex">
       {/* Applies animation to the header */}
       <motion.div
@@ -34,6 +35,7 @@ const Header = () => (
       </div>
       </motion.div>
     </div>
-)
+);
+};
 // AppWrap wraps the Header component with specific props ('home')
 export default AppWrap(Header, 'home');

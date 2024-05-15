@@ -3,7 +3,7 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import './Navbar.scss';
 
-const Navbar = () => {
+function Navbar () {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Function to open the menu

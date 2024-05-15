@@ -88,38 +88,47 @@
   }
 } 
 
-/* Bottom section of skills */
-.app__skills-bottom {
+
+
+/* Bottom section soft skills */
+.soft-skills h2 {
+  margin-top: 3rem;
+  margin-bottom: 3rem; 
   color: var(--primary-color);
-  margin-top: 5rem;
+}
+
+.soft-skills-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  justify-content: center; 
+  padding: 1rem; 
+  margin-top: 5rem;
 
-  h2 {
-    margin-top: 4rem;
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none; /* Remove default list styles */
+    text-align: center; /* Center the content horizontally */
+    margin-bottom: 1.5rem; 
+    width: 45%; 
+    max-width: 200px;
+    color: var(--primary-color);
   }
 
-  ul {
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
+  span {
+    font-size: 1.2rem; 
+    padding-bottom: 1.5rem;
   }
 }
 
-.app__skills-bottom ul li {
-  display: inline-block;
-  padding: 1rem;
+.skill-icon {
+  font-size: 2rem; 
+  margin-right: 0.5rem; 
 }
 
 
-.app__skills-bottom {
-  text-align: center;
-}
 
-.soft-skills {
-  color: var(--primary-color);
-}
 
 
 
