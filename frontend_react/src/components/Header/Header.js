@@ -22,10 +22,11 @@ function Header () {
         
         {/* Social media and contact icons */}
         <div className="app__icons-ai">
-          <a classname="git" href="https://github.com/Laleh-S" target="_blank" rel="noreferrer">
+          <a className="git" href="https://github.com/Laleh-S" target="_blank" rel="noreferrer">
+
             <AiFillGithub />
           </a>
-          <a classname="linkedin" href="https://www.linkedin.com/in/laleh-shahidi/" target="_blank" rel="noreferrer">
+          <a className="linkedin" href="https://www.linkedin.com/in/laleh-shahidi/" target="_blank" rel="noreferrer">
             <AiFillLinkedin />
           </a>
           <a className="email" href="mailto:laleh.shahidi78@gmail.com">
