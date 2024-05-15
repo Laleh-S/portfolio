@@ -20,7 +20,7 @@ function Navbar () {
     <nav className="app__navbar">
       {/* Navigation Links */}
       <ul className="app__navbar-links">
-        {["home", "about", "projects", "skills"].map((item) => (
+        {["home", "about", "projects", "skills" ].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>

@@ -1,6 +1,3 @@
-// #projects {
-
-// }
 
 /* Main container for projects */
 .app__projects {
@@ -17,7 +14,6 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 2rem 0;
-
 
   /* Individual filter buttons */
   .app__projects-filter-item {
@@ -48,30 +44,68 @@
   }
 }
 
-/* Poroject card container for displaying projects */
+/* Styling for the project item container */
+.app__projects-item {
+  perspective: 1000px; /* Needed for 3D effect */
+  width: 270px;
+  margin: 2rem;
+  position: relative;
+  height: 240px;
+  cursor: pointer;
+
+  @media screen and (min-width: 2000px) {
+    width: 470px;
+  }
+}
+
+/* Flip card inner container */
+.app__projects-item-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Ensures children are in 3D space */
+}
+
+/* Flip card front and back faces */
+.app__projects-front,
+.app__projects-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back face when facing front */
+  border-radius: 0.5rem;
+}
+
+.app__projects-front {
+  background-color: rgba(255, 255, 255);
+  // background-color: var(--primary-color);
+  color: #000;
+}
+
+.app__projects-back {
+  background-color: #f8f8f8;
+  color: #000;
+  transform: rotateY(180deg); /* Initially hides the back face */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Flipped state */
+.app__projects-item.flipped .app__projects-item-inner {
+  transform: rotateY(180deg); /* Rotates to show the back face */
+}
+
+/* Project card container for displaying projects */
 .app__projects-portfolio {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-  /* Styling for each project item */
-  .app__projects-item {
-    width: 270px;
-    flex-direction: column;
-    margin: 2rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    color: #000;
-    transition: all 0.3s ease;
-
-
-    @media screen and (min-width: 2000px) {
-      width: 470px;
-      border-radius: 0.75rem;
-    }
-  }
 
   &:hover {
     box-shadow: 0 0 30px rgb(88, 87, 86);
@@ -102,15 +136,12 @@
   opacity: 0;
   transition: all 0.3s ease;
 
-
-  /* Github and eye Links inside hover overlay */
   div {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #1372df;
     margin: 1rem;
-    font-family: var(--font-base);
     cursor: pointer;
     transition: all 0.3s ease;
 
@@ -129,12 +160,10 @@
   position: relative;
   flex-direction: column;
 
-  /* Paragraph text */
   p {
     color: #000;
   }
 
-  /* Heading text styling */
   h4 {
     margin-top: 1rem;
     line-height: 1.5;
