@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { HiMenuAlt4, HiX } from 'react-icons/hi';
+import { HiXCircle } from 'react-icons/hi';
+import { IoMenu } from "react-icons/io5";
 import { motion } from 'framer-motion';
+import images from '../images';
 import './Navbar.scss';
 
 function Navbar () {
@@ -18,6 +20,7 @@ function Navbar () {
 
   return (
     <nav className="app__navbar">
+      {/* <img src={images.logoSmall} alt="logo" style={{ width: '60px', height: 'auto' }} /> */}
       {/* Navigation Links */}
       <ul className="app__navbar-links">
         {["home", "about", "projects", "skills" ].map((item) => (
@@ -31,7 +34,7 @@ function Navbar () {
       {/* Hamburger Menu */}
       <div className="app__navbar-menu">
         {/* Hamburger Icon (Open Menu) */}
-        <HiMenuAlt4 onClick={openMenu} />
+        <IoMenu  onClick={openMenu} />
 
         {/* Conditional rendering of menu */}
         {isMenuOpen && (
@@ -40,7 +43,7 @@ function Navbar () {
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
             {/* Close Icon (Close Menu) */}
-            <HiX onClick={closeMenu} />
+            <HiXCircle onClick={closeMenu} />
 
             {/* Menu Links */}
             <ul>

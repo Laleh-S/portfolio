@@ -47,10 +47,10 @@
 /* Styling for the project item container */
 .app__projects-item {
   perspective: 1000px; /* Needed for 3D effect */
-  width: 270px;
+  width: 300px;
   margin: 2rem;
   position: relative;
-  height: 240px;
+  height: 260px;
   cursor: pointer;
 
   @media screen and (min-width: 2000px) {
@@ -79,7 +79,6 @@
 
 .app__projects-front {
   background-color: rgba(255, 255, 255);
-  // background-color: var(--primary-color);
   color: #000;
 }
 
@@ -111,6 +110,10 @@
     box-shadow: 0 0 30px rgb(88, 87, 86);
     border-radius: 30px;
   }
+}
+
+.nav__link:hover {
+  color: #FF0088;
 }
 
 /* Project image container */

@@ -7,11 +7,12 @@
   --font-base: "roboto", sans-serif;
 
   --primary-color: #bcbdbe;
-  --secondary-color: #FF0088;
+  --secondary-color: #ff0088;
   --black-color: #0c0c0c;
   --gray-color: #999999;
   --white-color: #ffffff;
   --blue-color: #1372df;
+  --yellow-color: #FFD700;
 }
 
 * {
