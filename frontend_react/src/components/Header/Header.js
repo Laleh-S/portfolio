@@ -17,8 +17,8 @@ function Header () {
       {/* Content within the header */}
       <div className="app__icons">
         {/* <img src={images.logoSmall} alt="logo" /> */}
-        <h1>Hello, I'm <span><a className="sparkle" href="#about">Laleh</a></span></h1>
-        <h2>Transitioned from Healthcare to Software Development.</h2>
+        <h1><span><a className="sparkle" href="#about">Hello, I'm Laleh</a></span></h1>
+        <h2>From Healthcare to Software Development.</h2>
         
         {/* Social media and contact icons */}
         <div className="app__icons-ai">

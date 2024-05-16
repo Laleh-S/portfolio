@@ -23,7 +23,7 @@ function Navbar () {
       {/* <img src={images.logoSmall} alt="logo" style={{ width: '60px', height: 'auto' }} /> */}
       {/* Navigation Links */}
       <ul className="app__navbar-links">
-        {["home", "about", "projects", "skills" ].map((item) => (
+        {["home", "about", "projects", "skills", "Resume" ].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
+import images from '../images';
 import { AppWrap, MotionWrap } from '../../wrapper'; // AppWrap higher-order component
 import { urlFor, client } from '../../client'; // Utility functions for fetching data
 import './Projects.scss';
@@ -12,7 +13,7 @@ function Projects() {
   const [filterProjects, setFilterProjects] = useState([]); // Filtered projects states
   const [activeFilter, setActiveFilter] = useState('All');  // Active filter category states
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });  // Animation properties state
-  const [projects, setProjects] = useState([]); // All projects state
+  const [projects, setProjects] = useState([]); 
   const [flippedCard, setFlippedCard] = useState(null);
 
   useEffect(() => {
@@ -78,7 +79,9 @@ function Projects() {
             <div className="app__projects-item-inner">
               <div className="app__projects-front app__flex">
                 <div className="app__projects-img app__flex">
-                  <img src={urlFor(project.imgUrl)} alt={project.name} />
+                  <img src={urlFor(project.imgUrl).url()} alt={project.name} />
+                    {/* <img src={urlFor(project.imgUrl).url()} alt={project.name} /> */}
+
                   <motion.div
                     className="app__projects-hover app__flex"
                     whileHover={{ opacity: [0, 1] }}
