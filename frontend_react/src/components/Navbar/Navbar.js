@@ -20,9 +20,9 @@ function Navbar () {
 
   return (
     <nav className="app__navbar">
-      {/* <img src={images.logoSmall} alt="logo" style={{ width: '60px', height: 'auto' }} /> */}
       {/* Navigation Links */}
       <ul className="app__navbar-links">
+      {/* <img src={images.logoSmall} alt="logo" style={{ width: '60px', height: 'auto' }} /> */}
         {["home", "about", "projects", "skills" ].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
